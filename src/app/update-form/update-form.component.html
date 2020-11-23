@@ -1,0 +1,15 @@
+
+<ng-template class="update-form-container" #updateform>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <div id="targetElement" #targetelement>
+    <div class="mt-2">
+      <a href="https://www.google.com">Google</a>
+    </div>
+  </div>
+  <div class="mt-2">
+    <input type="button" class="btn btn-primary submit-button" (click)="getElements()" value="Submit">
+    <input type="button" class="btn btn-danger ml-2" (click)="options.resetModel()" value="Reset">
+  </div>
+</form>
+</ng-template>
